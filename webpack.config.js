@@ -77,12 +77,14 @@ module.exports = (env = {}) => ({
   devServer: {
     contentBase: path.join(__dirname, 'src/public'),
     publicPath: process.env.BASE_URL,
+    index: './index.html',
     hot: true,
     stats: 'minimal',
     quiet: true,
     overlay: {
       warnings: true,
       errors: true
-    }
+    },
+    historyApiFallback: true,
   }
 });

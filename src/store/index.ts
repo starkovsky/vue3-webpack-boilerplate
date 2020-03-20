@@ -1,13 +1,34 @@
-import { createStore } from 'vuex'
+import {createStore} from 'vuex'
 
-type State = { count: number }
+type Todo = {
+    id: number,
+    complete: boolean,
+    title: string,
+}
 
-const state: State = { count: 0 };
+type State = {
+    todoList: Array<Todo>
+}
+
+const state: State = {
+    todoList: []
+};
 
 const mutations = {
-    increment(state: State) {
-        state.count++
+    createTodo(state: State, todo: Todo) {
+        state.todoList.push(todo);
     },
+    editTodo(state: State, todo: Todo) {
+        const index = state.todoList.findIndex(
+            item => item.id === todo.id
+        );
+        state.todoList[index] = todo;
+    },
+    removeTodo(state: State, id: number) {
+        state.todoList = state.todoList.filter(
+            item => item.id !== id
+        );
+    }
 };
 
 export const store = createStore({ state, mutations });

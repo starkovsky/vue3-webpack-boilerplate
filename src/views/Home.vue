@@ -2,23 +2,18 @@
   <div>
     Home Page
     <br>
-    <button
-      @click="store.commit('increment')">
-      Clicked {{ store.state.count }} times.
-    </button>
+    <TodoList></TodoList>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { useStore } from 'vuex'
+import TodoList from '../components/TodoList.vue';
 
 export default defineComponent({
-    setup() {
-        const store = useStore();
-        return {
-            store
-        }
+    name: 'Home',
+    components: {
+        TodoList
     }
 })
 </script>

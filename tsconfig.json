@@ -20,12 +20,15 @@
       "dom",
       "dom.iterable",
       "scripthost"
+    ],
+    "types": [
+      "@vue/types"
     ]
   },
   "include": [
     "src/**/*.ts",
     "src/**/*.tsx",
-    "src/**/*.vue",
+    "src/**/*.vue"
   ],
   "exclude": [
     "node_modules"
