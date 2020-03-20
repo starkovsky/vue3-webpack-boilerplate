@@ -1,5 +1,7 @@
 # Vue 3 webpack boilerplate
 
+This is preview version Vue 3, DO NOT USE IN PRODUCTION!
+
 ### Includes
 
 - Vue v3.0.0-alpha.9
