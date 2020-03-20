@@ -1,6 +1,10 @@
 <template>
   <div class="todo-item">
-    <input type="checkbox" :value="todo.status" @change="changeTodoStatus(todo.id)">
+    <input
+      type="checkbox"
+      :checked="todo.complete"
+      @change="changeTodoStatus(todo.id)"
+    >
     <div class="todo-item__title">{{ todo.title }}</div>
     <button @click="removeTodo(todo.id)">X</button>
   </div>

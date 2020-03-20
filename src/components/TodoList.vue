@@ -34,7 +34,7 @@ export default defineComponent({
         const id = computed(
             () => store.state.todoList.length
         );
-        const complete = ref(false);
+        const complete = ref(true);
         const title = ref('');
 
         function addTodo() {
