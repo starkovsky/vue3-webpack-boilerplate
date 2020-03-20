@@ -8,5 +8,21 @@
 - Typescript v3.8.3
 - Webpack 4.42.0
 
+
+## Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
 ### To Do
 - webpack 5
