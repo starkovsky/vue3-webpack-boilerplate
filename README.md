@@ -4,10 +4,11 @@ This is preview version Vue 3, DO NOT USE IN PRODUCTION!
 
 ## Includes
 
-- Vue v3.0.0-alpha.9
+- Vue v3.0.0-alpha.10
 - Vue Router v4.0.0-alpha.3
 - Vuex v4.0.0-alpha.1
 - Typescript v3.8.3
+- Babel v7.9.0
 - Webpack 4.42.0
 
 

@@ -31,9 +31,9 @@ export default defineComponent({
 
     function changeTodoStatus(id: number) {
       store.commit('editTodo', {
-        id,
-        complete: !props.todo.complete,
-        title: props.todo.title
+          id: id,
+          complete: !props.todo.complete,
+          title: props.todo.title
       });
     }
 

@@ -25,12 +25,23 @@ module.exports = (env = {}) => ({
         use: 'vue-loader'
       },
       {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: "babel-loader"
+      },
+      {
         test: /\.ts$/,
         exclude: /node_modules/,
-        loader: "ts-loader",
-        options: {
-          appendTsSuffixTo: [/\.vue$/]
-        }
+        use: [
+          {
+            loader: "babel-loader",
+            options: { babelrc: true }
+          },
+          {
+            loader: "ts-loader",
+            options: { appendTsSuffixTo: [/\.vue$/] }
+          }
+        ]
       },
       {
         test: /\.css$/,

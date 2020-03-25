@@ -30,9 +30,14 @@ export default defineComponent({
         const todoList = computed(
             () => store.state.todoList
         );
-
         const id = computed(
-            () => store.state.todoList.length
+            () => {
+                const { length } = store.state.todoList;
+                if (length > 0) {
+                    return store.state.todoList[length - 1]?.id + 1;
+                }
+                return 0;
+            }
         );
         const complete = ref(true);
         const title = ref('');

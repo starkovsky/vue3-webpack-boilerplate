@@ -16,7 +16,11 @@ const state: State = {
 
 const mutations = {
     createTodo(state: State, todo: Todo) {
-        state.todoList.push(todo);
+        state.todoList.push({
+            id: todo.id,
+            complete: todo.complete,
+            title: todo.title,
+        });
     },
     editTodo(state: State, todo: Todo) {
         const index = state.todoList.findIndex(
