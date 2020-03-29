@@ -18,6 +18,7 @@ module.exports = (env = {}) => ({
     filename: '[name].[hash:6].bundle.js',
     publicPath: process.env.BASE_URL,
   },
+
   module: {
     rules: [
       {
