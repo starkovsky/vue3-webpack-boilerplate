@@ -1,23 +1,21 @@
 <template>
   <div>
     Home Page
-    <br>
+    <br />
     <TodoList></TodoList>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent } from 'vue';
 import TodoList from '../components/TodoList.vue';
 
 export default defineComponent({
-    name: 'Home',
-    components: {
-        TodoList
-    }
-})
+  name: 'Home',
+  components: {
+    TodoList,
+  },
+});
 </script>
 
-<style>
-
-</style>
+<style></style>

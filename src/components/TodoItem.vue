@@ -4,7 +4,7 @@
       type="checkbox"
       :checked="todo.complete"
       @change="changeTodoStatus(todo.id)"
-    >
+    />
     <div class="todo-item__title">{{ todo.title }}</div>
     <button @click="removeTodo(todo.id)">X</button>
   </div>
@@ -12,15 +12,15 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { useStore } from "vuex";
+import { useStore } from 'vuex';
 
 export default defineComponent({
-  name: "TodoItem",
+  name: 'TodoItem',
   props: {
     todo: {
       type: Object,
-      require: true
-    }
+      require: true,
+    },
   },
   setup(props: any) {
     const store = useStore();
@@ -31,17 +31,17 @@ export default defineComponent({
 
     function changeTodoStatus(id: number) {
       store.commit('editTodo', {
-          id: id,
-          complete: !props.todo.complete,
-          title: props.todo.title
+        id: id,
+        complete: !props.todo.complete,
+        title: props.todo.title,
       });
     }
 
     return {
-        changeTodoStatus,
-        removeTodo
-    }
-  }
+      changeTodoStatus,
+      removeTodo,
+    };
+  },
 });
 </script>
 

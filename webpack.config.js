@@ -11,63 +11,72 @@ module.exports = (env = {}) => ({
   context: path.resolve(__dirname, 'src'),
   mode: env.production ? 'production' : 'development',
   entry: {
-    app: './app.ts'
+    app: './app.ts',
   },
   output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "[name].[hash:6].bundle.js",
+    path: path.resolve(__dirname, 'dist'),
+    filename: '[name].[hash:6].bundle.js',
     publicPath: process.env.BASE_URL,
   },
   module: {
     rules: [
       {
         test: /\.vue$/,
-        use: 'vue-loader'
+        use: 'vue-loader',
       },
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: "babel-loader"
+        loader: 'babel-loader',
       },
       {
         test: /\.ts$/,
         exclude: /node_modules/,
         use: [
           {
-            loader: "babel-loader",
-            options: { babelrc: true }
+            loader: 'babel-loader',
+            options: { babelrc: true },
           },
           {
-            loader: "ts-loader",
-            options: { appendTsSuffixTo: [/\.vue$/] }
-          }
-        ]
+            loader: 'ts-loader',
+            options: { appendTsSuffixTo: [/\.vue$/] },
+          },
+        ],
       },
       {
         test: /\.css$/,
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
-            options: { hmr: !env.production }
+            options: { hmr: !env.production },
           },
-          'css-loader'
-        ]
+          'css-loader',
+        ],
+      },
+      {
+        enforce: 'pre',
+        test: /\.(js|ts|vue)$/,
+        exclude: /node_modules/,
+        loader: 'eslint-loader',
+        options: {
+          fix: true,
+        },
       },
     ],
   },
   resolve: {
     extensions: ['.ts', '.js', '.vue', '.json'],
     alias: {
-      'vue': '@vue/runtime-dom'
-    }
+      vue: '@vue/runtime-dom',
+    },
   },
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: './public/index.html'
+      template: './public/index.html',
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].css'
+      filename: '[name].css',
     }),
     new WebpackBar(),
     new VueLoaderPlugin(),
@@ -79,10 +88,10 @@ module.exports = (env = {}) => ({
         vendor: {
           test: /[\\/]node_modules[\\/]/,
           name: 'vendors',
-          chunks: 'all'
-        }
-      }
-    }
+          chunks: 'all',
+        },
+      },
+    },
   },
   devtool: 'source-map',
   devServer: {
@@ -94,8 +103,8 @@ module.exports = (env = {}) => ({
     quiet: true,
     overlay: {
       warnings: true,
-      errors: true
+      errors: true,
     },
     historyApiFallback: true,
-  }
+  },
 });
