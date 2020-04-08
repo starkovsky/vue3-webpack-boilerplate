@@ -12,15 +12,15 @@
   "author": "Vlad Starkovsky",
   "license": "ISC",
   "dependencies": {
-    "vue": "^3.0.0-alpha.11",
-    "vue-router": "^4.0.0-alpha.4",
+    "vue": "^3.0.0-alpha.12",
+    "vue-router": "^4.0.0-alpha.5",
     "vuex": "next"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.0",
     "@babel/preset-typescript": "^7.9.0",
-    "@vue/compiler-sfc": "^3.0.0-alpha.11",
+    "@vue/compiler-sfc": "^3.0.0-alpha.12",
     "babel-loader": "^8.1.0",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.4.2",
