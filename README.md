@@ -4,7 +4,7 @@ This is preview version Vue 3, DO NOT USE IN PRODUCTION!
 
 ## Includes
 
-- Vue v3.0.0-beta.1
+- Vue v3.0.0-beta.3
 - Vue Router v4.0.0-alpha.7
 - Vuex v4.0.0-alpha.1
 - Typescript v3.8.3
