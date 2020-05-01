@@ -4,12 +4,12 @@ This is preview version Vue 3, DO NOT USE IN PRODUCTION!
 
 ## Includes
 
-- Vue v3.0.0-beta.3
-- Vue Router v4.0.0-alpha.7
-- Vuex v4.0.0-alpha.1
-- Typescript v3.8.3
-- Babel v7.9.0
-- Webpack 4.42.0
+- Vue 3.0.0-beta.5
+- Vue Router 4.0.0-alpha.9
+- Vuex 4.0.0-beta.1
+- Typescript 3.8.3
+- Babel 7.9.6
+- Webpack 4.43.0
 
 
 ## Project setup
